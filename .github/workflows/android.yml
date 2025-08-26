@@ -92,7 +92,6 @@ jobs:
           cd /tmp/mesa/lib
           ls -a
           cp libOSMesa.so /tmp/mesa/output/libOSMesa_8.so
-          cp libxatracker.so /tmp/mesa/output/libxatracker.so
           cp libfreedreno_noop_drm_shim.so /tmp/mesa/drm_shim/libfreedreno_noop_drm_shim.so
           # cp libpanfrost_noop_drm_shim.so /tmp/mesa/drm_shim/libpanfrost_noop_drm_shim.so
 
@@ -101,13 +100,7 @@ jobs:
         with:
           name: libOSMesa_${{matrix.arch}}
           path: /tmp/mesa/output/libOSMesa_8.so
-
-      - name: Upload xatracker libraries
-        uses: actions/upload-artifact@v4
-        with:
-          name: libxatracker_${{matrix.arch}}
-          path: /tmp/mesa/output/libxatracker.so
-
+          
       - name: Upload drm_shim tools libraries
         uses: actions/upload-artifact@v4
         with:
