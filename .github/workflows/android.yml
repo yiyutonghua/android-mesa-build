@@ -25,7 +25,7 @@ jobs:
 
       - name: Set ndkver,sdkver and work_dir
         run: |
-          echo "NDK_VER=android-ndk-r27c" >> $GITHUB_ENV
+          echo "NDK_VER=android-ndk-r27d" >> $GITHUB_ENV
           echo "SDK_VER=29" >> $GITHUB_ENV
           echo "WORK_DIR=$(pwd)" >> $GITHUB_ENV
 
